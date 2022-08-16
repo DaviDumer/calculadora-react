@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/static/css/main.e2a577c9.css",
+    "main.js": "/static/js/main.ca57360e.js",
+    "static/media/backspace.svg": "/static/media/backspace.cb88872eab80df64d0216ffd59cb18a8.svg",
+    "index.html": "/index.html",
+    "main.e2a577c9.css.map": "/static/css/main.e2a577c9.css.map",
+    "main.ca57360e.js.map": "/static/js/main.ca57360e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e2a577c9.css",
+    "static/js/main.ca57360e.js"
+  ]
+}
