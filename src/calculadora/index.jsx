@@ -2,22 +2,13 @@ import React, { useEffect, useState } from "react";
 import './css/main.css';
 import icon2 from "./icons/backspace.svg";
 
-function calculadora(characterList) {
-
-}
-
-// document.querySelector().classList.contains
-
 function filtraBotoes({ e: { target: el }, state, setState }) {
-  // console.log(state)
   state.operator = true;
   if (el.classList.contains('btn-number')) {
     if (state.texto === '0') state.texto = '';
     state.texto = state.texto.concat(el.textContent)
-  
   } else if (el.classList.contains('backspace')) {
     state.texto = state.texto.slice(0, -1);
-  
   } else if (el.classList.contains('parenteses')) {
     state.texto = state.texto.concat(el.textContent)
   } else if (el.classList.contains('operator')) {
@@ -30,20 +21,18 @@ function filtraBotoes({ e: { target: el }, state, setState }) {
       }
     };
     state.texto = state.texto.concat(el.textContent);
-
   } else if (el.classList.contains('btn-equal')) {
     state.texto = `${state.valor}`
   } else if (el.classList.contains('clear')) {
-    
+    state.texto = '';
   } else if (el.classList.contains('clear-all')) {
-    
+    state.texto = '0';
+    state.valor = 0
   }
   try {
     const test = eval(state.texto);
     state.valor = test;
-  } catch (err) {
-
-  } 
+  } catch (err) {} 
   finally {
     setState({ ...state })
   }
@@ -80,8 +69,8 @@ function App() {
 
           <button className="btn parenteses">(</button>
           <button className="btn parenteses">)</button>
-          <div></div>
-          <div></div>
+          {/* <button className="btn"></button>
+          <button className="btn"></button> */}
           
 
           <button className="btn btn-number">7</button>

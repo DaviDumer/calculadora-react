@@ -79,6 +79,10 @@ button.btn:hover {
   background-color: #1a38af;
 }
 
+.parenteses {
+  grid-area: span 1 / span 2;
+}
+
 button.btn-number:hover {
   background-color: #2042cb;
 }
