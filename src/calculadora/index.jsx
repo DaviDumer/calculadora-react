@@ -30,7 +30,7 @@ function filtraBotoes({ e: { target: el }, state, setState }) {
     state.valor = 0
   }
   try {
-    const test = eval(state.texto);
+    const test = eval(state.texto); // criar uma função para fazer calculo!!!
     state.valor = test;
   } catch (err) {} 
   finally {
@@ -48,7 +48,7 @@ function App() {
     document.addEventListener('click', (e) => {
       filtraBotoes({ e, state, setState });
     });
-  }, []);
+  });
   return (
     <main id="container">
       <div id="box">
@@ -62,7 +62,7 @@ function App() {
           <button className="btn clear">CE</button>
           <button className="btn clear-all">C</button>
           <button className="btn backspace">
-            <img  src={icon2}  width={30} className="backspace"/>
+            <img  src={icon2} alt="backspace"  width={30} className="backspace"/>
           </button>
           <button className="btn operator">/</button>
           {/* <button className="btn operator">&divide;</button> */}
